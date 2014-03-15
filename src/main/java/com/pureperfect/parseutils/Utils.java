@@ -92,8 +92,7 @@ public class Utils
 
 		return value;
 
-		// TODO sign jars and push to maven central
-		// TODO tag version in github
+		// TODO RELEASE
 	}
 
 	private Utils()
