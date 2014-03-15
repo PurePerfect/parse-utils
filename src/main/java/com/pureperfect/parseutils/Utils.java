@@ -92,7 +92,6 @@ public class Utils
 
 		return value;
 
-		// TODO push to github
 		// TODO sign jars and push to maven central
 		// TODO tag version in github
 	}
