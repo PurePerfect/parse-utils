@@ -91,7 +91,7 @@ public class Position
 	/**
 	 * Same as {@link Position#getPositionInStream positionInStream}.
 	 * 
-	 * @returnSame as {@link Position#getPositionInStream positionInStream}.
+	 * @return Same as {@link Position#getPositionInStream positionInStream}.
 	 */
 	@Override
 	public int hashCode()

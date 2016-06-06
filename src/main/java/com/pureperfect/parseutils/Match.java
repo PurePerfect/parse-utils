@@ -44,8 +44,14 @@ public interface Match
 	/**
 	 * Matches whitespace except for '\n'.
 	 */
+	// FIXME change the name of this constant
 	public static final Match WHITESPACE_NOTNL = new Match()
 	{
+		/**
+		 * Matches whitespace (except '\n').
+		 * 
+		 * @return true if the character is whitespace but not a new line.
+		 */
 		@Override
 		public boolean matches(final char c)
 		{
@@ -56,7 +62,10 @@ public interface Match
 	/**
 	 * See if the character matches the given criteria.
 	 * 
-	 * @return whether or not the character matches the critera.
+	 * @param c the
+	 *            character to test against the matcher criteria.
+	 * 
+	 * @return whether or not the character matches the criteria.
 	 */
 	public boolean matches(char c);
 }
