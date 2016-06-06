@@ -67,7 +67,8 @@ public class CharacterStream
 	/**
 	 * Close the stream.
 	 * 
-	 * @throws IOException if there is an error closing the stream.
+	 * @throws IOException
+	 *             if there is an error closing the stream.
 	 */
 	public void close() throws IOException
 	{
@@ -99,7 +100,8 @@ public class CharacterStream
 	 * by the end of file char.
 	 * 
 	 * @return whether or not we are at the end of the stream
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public boolean isAtEOF() throws IOException
 	{
@@ -110,20 +112,23 @@ public class CharacterStream
 	 * Determine whether or not we are at a new line.
 	 * 
 	 * @return whether or not we are at a new line.
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public boolean isAtNewLine() throws IOException
 	{
 		final char[] next = this.peek(2);
 
-		return next.length > 1 && next[0] == '\n' || next.length == 2
-				&& next[0] == '\r' && next[1] == '\n';
+		return next.length > 1 && next[0] == '\n' || next.length == 2 && next[0] == '\r' && next[1] == '\n';
 	}
 
 	/**
 	 * Mark the current position in the stream.
 	 * 
-	 * @throws IOException will most likely occur if the underlying i/o resource is not mark supported.
+	 * @throws IOException
+	 *             in theory this should never occur as this class will
+	 *             implement mark support regardless of whether the underlying
+	 *             stream supports mark or not.
 	 */
 	public void mark() throws IOException
 	{
@@ -136,7 +141,8 @@ public class CharacterStream
 	 * Peek ahead at the next character in the stream.
 	 * 
 	 * @return the next character in the stream.
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public char peek() throws IOException
 	{
@@ -154,7 +160,8 @@ public class CharacterStream
 	 * @param count
 	 *            the number of characters to peek at
 	 * @return an array of characters
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public char[] peek(final int count) throws IOException
 	{
@@ -179,7 +186,8 @@ public class CharacterStream
 	 * @param chars
 	 *            the characters to match
 	 * @return whether or not they match
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public boolean peekAndMatch(final String chars) throws IOException
 	{
@@ -191,7 +199,8 @@ public class CharacterStream
 	 * 
 	 * @return the next character in the stream.
 	 * 
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public char read() throws IOException
 	{
@@ -218,7 +227,8 @@ public class CharacterStream
 	/**
 	 * Reset current position to the marked position.
 	 * 
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public void reset() throws IOException
 	{
@@ -232,7 +242,8 @@ public class CharacterStream
 	 * 
 	 * @param count
 	 *            the number of characters to skip
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public void skip(final int count) throws IOException
 	{
@@ -249,7 +260,8 @@ public class CharacterStream
 	 * @param m
 	 *            the matcher to use
 	 * @return the number of characters skipped
-	 * @throws IOException if there is an error reading.
+	 * @throws IOException
+	 *             if there is an error reading.
 	 */
 	public int skip(final Match m) throws IOException
 	{
