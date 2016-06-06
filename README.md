@@ -5,4 +5,4 @@ Contains some improvements for parsing character streams over common IO librarie
 It would be nice to add matchers for Strings in addition to the ones that exist for characters, but IDNI. This project is defect-free and 100% test covered so you can consider version 0.1 to be the final release until I need it to do something it doesn't already.
 
 
-
+P.S. It's really, really fast.

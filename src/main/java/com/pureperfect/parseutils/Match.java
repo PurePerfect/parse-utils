@@ -44,8 +44,7 @@ public interface Match
 	/**
 	 * Matches whitespace except for '\n'.
 	 */
-	// FIXME change the name of this constant
-	public static final Match WHITESPACE_NOTNL = new Match()
+	public static final Match WHITESPACE_EXCEPT_NEWLINE = new Match()
 	{
 		/**
 		 * Matches whitespace (except '\n').
