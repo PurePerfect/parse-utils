@@ -22,7 +22,7 @@ package com.pureperfect.parseutils;
  * @version 0.1
  * @since 0.1
  */
-public class Utils
+public class Strings
 {
 	/**
 	 * Concatenate a group of objects using the given separator.
@@ -34,8 +34,7 @@ public class Utils
 	 *            the objects to concatenate
 	 * @return the concatenated sequence.
 	 */
-	public static StringBuilder concat(final String separator,
-			final Object... args)
+	public static StringBuilder concat(final String separator, final Object... args)
 	{
 		final StringBuilder results = new StringBuilder(args.length * 16);
 
@@ -83,19 +82,16 @@ public class Utils
 			value.replace(0, 1, "");
 		}
 
-		for (int length = value.length(); length > 0
-				&& Character.isWhitespace(value.charAt(length - 1)); length = value
+		for (int length = value.length(); length > 0 && Character.isWhitespace(value.charAt(length - 1)); length = value
 				.length())
 		{
 			value.replace(length - 1, length, "");
 		}
 
 		return value;
-
-		// TODO RELEASE
 	}
 
-	private Utils()
+	private Strings()
 	{
 		// Hide constructor only static methods in this class
 	}

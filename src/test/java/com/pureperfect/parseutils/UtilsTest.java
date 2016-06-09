@@ -32,40 +32,40 @@ public class UtilsTest
 	public void concat()
 	{
 		assertEquals("onetwothree",
-				Utils.concat("", "one", "two", "three").toString());
+				Strings.concat("", "one", "two", "three").toString());
 	}
 
 	@Test
 	public void concatWithSeparator()
 	{
 		assertEquals("one, two, three",
-				Utils.concat(", ", "one", "two", "three").toString());
+				Strings.concat(", ", "one", "two", "three").toString());
 	}
 
 	@Test
 	public void trimString()
 	{
-		assertEquals("asdf", Utils.trim(" asdf "));
+		assertEquals("asdf", Strings.trim(" asdf "));
 
 		// Need this reference to make sure trim string method is called
 		final String s = null;
 
-		assertNull(Utils.trim(s));
+		assertNull(Strings.trim(s));
 	}
 
 	@Test
 	public void trimStringBuilder()
 	{
-		assertEquals("asdf", Utils.trim(new StringBuilder(" asdf "))
+		assertEquals("asdf", Strings.trim(new StringBuilder(" asdf "))
 				.toString());
 
 		// Need this reference to make sure correct trim method is called
 		final StringBuilder s = null;
 
-		assertNull(Utils.trim(s));
+		assertNull(Strings.trim(s));
 		
-		assertEquals("", Utils.trim(new StringBuilder("")).toString());
+		assertEquals("", Strings.trim(new StringBuilder("")).toString());
 		
-		assertEquals("", Utils.trim(new StringBuilder("   ")).toString());
+		assertEquals("", Strings.trim(new StringBuilder("   ")).toString());
 	}
 }
